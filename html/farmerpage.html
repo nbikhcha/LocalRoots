@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Farmer Login</title>
+
+        <!--link rel=stylesheet href="style.css" type="text/css"--> 
+        
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZGQVJhejmgfv4TdZJ1M0U4JXKweG4Bng&sensor=true"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="/farmerpage.js"></script>
+    </head>
+
+    <body>
+        <div id="loginpage">
+            <h1>Enter Login Information:</h1>
+            <form>
+                <label for="username">Email:   </label><input type="text" name="username" id="username"><br>
+                <label for="password">Password:   </label><input type="password" name="password" id="password"><br>
+            </form>
+            <div id="incorrect"></div>
+            <button id="submit_login">login</button>
+            <h1>Or Register:</h1>
+            <form>
+                <label for="username_register">Email:   </label>
+                <input type="text" name="username_register" id="username_register"><br>
+                <label for="password_register">Password:   </label>
+                <input type="password" name="password_register" id="password_register"><br>
+                <label for="password_check">Re-enter Password:   </label><input type="password" name="password_check" id="password_check"><br>
+                <div id="nomatch"></div>
+            </form>
+            <button id="submit_register">register</button>
+        </div> 
+        <div id="addfarmpage">
+            <h1>Add Farm: </h1>
+                <label for="farm_name">name:  </label><input type="text" name="farm_name" id="farm_name"><br>
+                <label for="city">city:  </label><input type="text" name="city" id="city"/><br/>
+                <label for="state">state:  </label><input type="textarea" name="state" id="state" /><br/>
+                <label for="cert">certifications: </label><input type="text" name="cert" id="cert" /><br/>
+                <button id="addfarmbutton">Submit</button>
+        </div>
+        <div id="addproductpage">
+            <h1>Add Product:</h1>
+                <label for="name">name:  </label><input type="text" name="name" id="name"><br>
+                <label for="category">category:  </label><input type="text" name="category" id="category"/><br/>
+                <label for="description">description:  </label><input type="textarea" name="description" id="description" /><br/>
+                <label>Image File:</label><br/>
+                <input type="file" id="imageLoader" name="imageLoader"/>
+                <canvas id="imageCanvas"></canvas>
+                <div id="pricesdiv">
+                    <div id="d1">
+                        <label for="p1">Price:  </label><input type="text" name="p1" id="p1">
+                        <label for="u1">Unit:  </label><input type="text" name="u1" id="u1"/>
+                        <div id="v1"></div>
+                    </div>
+                </div>
+                
+                <button id="addprice">Add Price</button><br/>
+                <button id="submitbutton">Submit</button>
+        </div>
+        <button id="signout">Sign Out</button>
+    </body>
+</html>
+
+
+

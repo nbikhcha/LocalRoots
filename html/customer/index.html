@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Local Roots</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0 maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        
+        <link rel=stylesheet href="/css/layout.css" type="text/css">
+        <link rel=stylesheet href="/css/style.css" type="text/css">
+        
+        
+        <link rel=stylesheet href="/css/home.css" type="text/css">
+        <link rel=stylesheet href="/css/about.css" type="text/css">
+        <link rel=stylesheet href="/css/products.css" type="text/css">
+        <link rel=stylesheet href="/css/checkout.css" type="text/css">
+        <link rel=stylesheet href="/css/account.css" type="text/css">
+        <link rel=stylesheet href="/css/transitions.css" type="text/css">
+        
+        
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZGQVJhejmgfv4TdZJ1M0U4JXKweG4Bng&sensor=true"></script>
+        <script type="text/javascript" src="https://js.stripe.com/v1/"></script>
+		<script type="text/javascript" src="/jquery.js"></script>
+		<script type="text/javascript" src="/doubletouch.js"></script>
+		<script type="text/javascript" src="/Transitioner.js"></script>
+		<script type="text/javascript" src="/util.js"></script>
+        
+		<script type="text/javascript" src="/CustomerApp.js"></script>
+		<script type="text/javascript" src="/home.js"></script>
+		<script type="text/javascript" src="/about.js"></script>
+		<script type="text/javascript" src="/products.js"></script>
+		<script type="text/javascript" src="/account.js"></script>
+		<script type="text/javascript" src="/checkout.js"></script>
+        
+        
+	</head>
+
+	<body>
+        
+        <!--Home Page-->
+        <div id="homePage" class="page center">
+            <div class="homeBlock" id="homeInputBlock">
+                <div class="logo"></div>
+                <input type="number" class="noscroll" id="zipcodeTxt" placeholder="Enter Zipcode Here"/>
+                <div id="zipcodeBtn">Search</div>
+                <p>Please enter zipcode before moving on</p>
+            </div>
+        </div>      <!--End of Home Page-->
+        
+        <!--About Page-->
+        <div id="aboutPage" class="page hidden">
+            <div class="logo"></div>
+            <div class="aboutBlock" id="aboutAboutBlock">
+                <h1>About us.</h1>
+                <p>Local-Roots is an online market for anyone and everyone
+                 who wants to buy products from local farms.</p>
+            </div>
+            <div class="aboutBlock" id="aboutHowBlock">
+                <h1>How it works.</h1>
+                <p>Navigate this app using the footer at the bottom of
+                     the page. You are required to enter your zipcode 
+                     before using the app's other features. We encourage 
+                     you to also create an account before adding things 
+                     to your cart. When you're ready to go, just click
+                     the cart icon at the bottom and checkout! Thanks for 
+                     shopping with Local-Roots!</p>
+                
+            </div>
+        </div>      <!--End of About Page-->
+        
+        <!--Products Page-->
+        <div id="productsPage" class="page hidden">
+        <div class="pageContainer">
+            <div id="productHdr">
+                <div id="searchForm">
+                    <div class="hdrBtn" id="btnLeft">Filter</div>
+                    <input type="text" placeholder="Search for Product" id="searchterm">
+                    <div class="hdrBtn" id="btnRight">Search</div>
+                </div>
+            </div>
+            
+            <div class="content" id="productContent">
+                <div class="itemBlock" id="first">
+                    <img class="itemImg" alt="tomato" src="/img/tomato.jpg">
+                    <div class="itemDetails">
+                        <h1>Tomato</h1>
+                        <p>Your Best Farm Around Farm<span class="farmDist">8.1 mi</span></p>
+                        
+                    </div>
+                    <div class="rating r2"></div>
+                    <div class="itemAmount">
+                        <input type="number" value="0" min= "0" class="amountNumber"/>
+                        <select class="amountUnit">
+                            <option value="none">--select--</option>
+                            <option value="bu">bushels</option>
+                            <option value="pi">pints</option>
+                            <option value="kg">kg</option>
+                            <option value="lb">lb</option>
+                            <option value="oz">oz</option>
+                        </select>
+                    </div>
+
+                    <div class="itemFinalize">
+                        <div class="itemPriceLabel">Price: <span class="itemPrice">---</span></div>
+
+                        <div class="addBtn">Add</div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        
+            <div class="content" id="filterContent" >
+                <div class="filterHdr">
+                    Sort By:
+                    <p>Choose only one</p>
+                </div>
+                <div id="sortBy">
+                    <div class="sortOption selected">
+                        <input type="radio" name="sort" class="sort" value="recommended" checked="true"/>Recommended
+                    </div>
+                    <div class="sortOption">
+                        <input type="radio" name="sort" class="sort" value="price"/>Price
+                    </div>
+                    <div class="sortOption">
+                        <input type="radio" name="sort" class="sort" value="distance"/>Distance
+                    </div>
+                    <div class="sortOption">
+                        <input type="radio" name="sort" class="sort" value="ratings"/>Ratings
+                    </div>
+                </div>
+                
+                <div class="filterHdr">
+                    Show only:
+                    <p>Select all that apply</p>
+                </div>
+                <div id="narrowBy">
+                    <div class="narrowOption">
+                        <input type="checkbox" name="narrow" value="organic"/>Organic
+                    </div>
+                    <div class="narrowOption">
+                        <input type="checkbox" name="narrow" value="certified"/>Certified
+                    </div>
+                    <div class="narrowOption">
+                        <input type="checkbox" name="narrow" value="meat"/>Meat
+                    </div>
+                    <div class="narrowOption">
+                        <input type="checkbox" name="narrow" value="vegetables"/>vegetables
+                    </div>
+                    
+                </div>
+            </div>
+        
+        </div>
+        </div>      <!--End of Products Page-->
+        
+        <!--Account Page-->
+        <div id="accountPage" class="page hidden splitPage">
+            <div id="loginPage">
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" name="loginEmail"/>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword"/>
+                <h2 class="invalidNote" id="invalidLogin">Invalid Email/Password Provided</h2>
+                <div class="accountBtn" id="loginBtn">Log In</div>
+                <h1>Don't have an account?</h1>
+                <div class="accountBtn" id="registerBtn">Register</div>
+            </div>
+            
+            <div id="registerPage">
+                <h2 class="invalidNote" id="invalidRegisterEmailError">Error occurred in registering the email</h2>
+                <h2 class="invalidNote" id="invalidRegisterEmail">Please enter valid email</h2>
+                <label for="registerEmail">Email:</label>
+                <input type="email" id="registerEmail" name="registerEmail"/>
+                
+                <h2 class="invalidNote" id="invalidRegisterPwMatch">Passwords don't match below</h2>
+                <h2 class="invalidNote" id="invalidRegisterPwCond">Password must be at least 7 characters</h2>
+                <label for="registerPassword1">Password:</label>
+                <input type="password" id="regPassword1" name="registerPassword1"/>
+                <label for="registerPassword2">Retype Password:</label>
+                <input type="password" id="regPassword2" name="registerPassword2"/>
+                
+                <div class="accountBtn" id="registerSubmitBtn">Create Account</div>
+                <div class="accountBtn backToLoginBtn" id="registerBackBtn">Cancel</div>
+            </div>
+            
+            <div id="editAccountPage">
+                
+            <ul class="leftNav">
+                <li><a name="loginInfo" class="activeTab" id="loginInfoLink">Login Info</a></li>
+                <li><a name="signout" id="signoutLink">Sign Out</a></li>
+            </ul>
+            
+            <div id="accountContent">
+                
+                <div id="loginInfo" class="rightPage activePage">
+                    <div class="pageContainer">
+                        <label for="oldPassword">Old Password:</label>
+                        <input type="password" id="oldPassword" name="oldPassword"/>
+                        
+                        <label for="changedPassword1">New Password:</label>
+                        <input type="password" id="chPassword1" name="changedPassword1"/>
+                        <label for="changedPassword2">Retype New Password:</label>
+                        <input type="password" id="chPassword2" name="changedPassword2"/>
+                        
+                        <div class="accountBtn" id="loginInfoContinueBtn">Save</div>
+                    </div>
+                </div>
+                
+                <div id="signout" class="rightPage">
+                    <div class="pageContainer">
+                        <div class="accountBtn backToLoginBtn" id="loggedinBackBtn">Sign Out</div>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
+            
+        </div>      <!--End of Account Page-->
+        
+        <!--Checkout Page-->
+        <div id="checkoutPage" class="page hidden splitPage">
+            <ul class="leftNav">
+                <li><a name="cart" class="activeTab" id="cartLink">Cart</a></li>
+                <li><a name="delivery" id="deliveryLink">Delivery</a></li>
+                <li><a name="payment" id="paymentLink">Payment</a></li>
+                <li><a name="confirm" id="confirmLink">Confirm</a></li>
+            </ul>
+            
+            <div id="checkoutContent">
+                <div id="cart" class="rightPage activePage">
+                    <div class="pageContainer">
+                        <div id="productList">
+                        </div>
+                        <div id="cartSummary">
+                            <h1>Number Items: <span id="itemCount"></span></h1>
+                            <h1>Total Price: $<span id="cartPrice"></span></h1>
+                        </div>
+                        <div class="continueBtn" id="cartContinueBtn">Checkout</div>
+                    </div>
+                </div>
+                <div id="delivery" class="rightPage">
+                    <div class="pageContainer">
+                        <form id="deliveryForm">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" id="name"/>
+                            
+                            <label for="address">Shipping Address:</label>
+                            <input type="text" name="address" id="address1"/>
+                            <input type="text" name="address" id="address2"/>
+                            
+                            <label for="email">Email:</label>
+                            <input type="text" name="email" id="email"/>
+                            
+                            <label for="number">Phone Number:</label>
+                            <input type="number" name="number" id="number" class="noscroll"/>
+                            
+                            <label for="comments">Comments:</label>
+                            <textarea rows="3" name="comments" id="comments"></textarea>
+                        </form>
+                        <div class="continueBtn" id="deliveryContinueBtn">Continue</div>
+
+                        <div class="goBackBtn" id="deliveryBackBtn">Back</div>
+                    </div>
+                </div>
+                
+                <div id="payment" class="rightPage">
+                    <div class="pageContainer">
+
+                        <!--Error messages-->
+                        <h2 class="invalidNote" id="invalidPaymentInfo">The card could not be processed.</h2>
+                        <h2 class="invalidNote" id="invalidCardInfo">The credit card number below cannot be processed</h2>
+                        <h2 class="invalidNote" id="invalidCVCInfo">The CVC cannot be processed</h2>
+                        <h2 class="invalidNote" id="invalidExpInfo">The expiration date is not correct</h2>
+
+                        <form action="/checkoutPay" method="POST" id="paymentForm">
+
+                            <label>Card Number</label>
+                            <input type="text" autocomplete="off" id="card-number"/>
+                            
+                            <label>CVC</label>
+                            <input type="text" class="w60" autocomplete="off" id="card-cvc"/>
+
+                            <label>Expiration (MM/YYYY)</label>
+                            <input type="number" class="noscroll w60" id="card-expiry-month"/>
+                            <span> / </span>
+                            <input type="number" class="noscroll w100" id="card-expiry-year"/>
+
+                        </form>
+
+                        <p>(Card will not be charged until after you confirm in "Confirm" tab)</p>
+                        <div class="continueBtn" id="paymentContinueBtn">Continue</div>
+
+                        <div class="goBackBtn" id="paymentBackBtn">Back</div>
+                    </div>
+                </div>
+                
+                <div id="confirm" class="rightPage">
+                    <div class="pageContainer">
+
+                        <h1>Total Price: $<span id="confirmPrice"></span></h1>
+
+                        <div class="continueBtn" id="confirmContinueBtn">Confirm</div>
+
+                        <div class="goBackBtn" id="confirmBackBtn">Back</div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>      <!--End of Checkout Page-->
+        
+        
+        
+        
+        <!--Navigation Footer-->
+        <div id="navFooter">
+            <div class="iconBlock active" id="HomePageBtn"><div id="homeIcon" class="icon"></div><h1>Home</h1></div>
+            <div class="iconBlock" id="AboutPageBtn"><div id="aboutIcon" class="icon"></div><h1>About</h1></div>
+            <div class="iconBlock" id="ProductsPageBtn"><div id="productsIcon" class="icon"></div><h1>Search</h1></div>
+            <div class="iconBlock" id="AccountPageBtn"><div id="accountIcon" class="icon"></div><h1>Account</h1></div>
+            <div class="iconBlock" id="CheckoutPageBtn"><div id="checkoutIcon" class="icon"></div><h1>Cart</h1></div>
+        </div>
+        
+    </body>
+</html>

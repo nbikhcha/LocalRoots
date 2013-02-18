@@ -1,0 +1,135 @@
+/*Contains the style for elements that are shared among pages*/
+
+
+.logo {
+    background-image: url('/img/logo.png');
+    background-repeat: no-repeat;
+    height: 106px;
+    background-position: center;
+    padding-bottom: 20px;
+}
+
+.splitPage ul {
+    position: relative;
+    width: 80px;
+    height: 100%;
+    float:left;
+    
+}
+
+.splitPage li {
+    
+}
+
+.splitPage li a {
+    border: solid 1px #AAAAAA;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    width: 100%;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	padding: 20px 5px 20px 5px;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    
+	-webkit-border-radius: 10px 0px 0px 10px ;
+	-moz-border-radius: 10px 0px 0px 10px ;
+	border-radius: 10px 0px 0px 10px ;
+}
+
+.splitPage li a.activeTab{
+    background-color: #CCCCCC;
+    border-right: none;
+}
+
+.splitPage .rightPage {
+    position: relative;
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    
+    overflow: auto;
+    padding: 10px;
+    display: none;
+    background-color: #CCCCCC;
+    min-height: 250px;
+}
+.splitPage .rightPage.activePage{
+    display: block;
+}
+
+.splitPage .pageContainer {
+    background-color: #FEFEFE;
+    position: relative;
+    padding: 10px;
+    min-height: 100px;
+}
+
+.splitPage input, textarea {
+    width: 100%;
+}
+
+
+
+
+input[type=number].noscroll::-webkit-inner-spin-button,
+input[type=number].noscroll::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+label {
+    display: block;
+}
+
+input, textarea {
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+    font-size: 16px;
+}
+
+.rating{
+    background-image: url('/img/rating_stars.png');
+    height: 20px;
+    width: 100px;
+    float:left;
+}
+.rating.unrated{
+    background-position: 0px 220px;
+}
+.rating.r0half{
+    background-position: 0px 200px;
+}
+.rating.r1{
+    background-position: 0px 180px;
+}
+.rating.r1half{
+    background-position: 0px 160px;
+}
+.rating.r2{
+    background-position: 0px 140px;
+}
+.rating.r2half{
+    background-position: 0px 120px;
+}
+.rating.r3{
+    background-position: 0px 100px;
+}
+.rating.r3half{
+    background-position: 0px 80px;
+}
+.rating.r4{
+    background-position: 0px 60px;
+}
+.rating.r4half{
+    background-position: 0px 40px;
+}
+.rating.r5{
+    background-position: 0px 20px;
+}

@@ -1,0 +1,26 @@
+Javascript (including creating your own objects with inheritance)
+Canvas
+HTML (including a reasonably wide range of techniques, such as tables, forms with form validation, etc)
+CSS (including a reasonably range of techniques, such as reset, pseudo-selectors, fixed and fluid layout, transitions and animations, etc)
+DOM manipulation
+jQuery
+jQuery Mobile or Sencha Touch or equivalent (including your own high-quality custom-made UI widgets)
+PhoneGap
+AJAX (or similar) client (consume an API)
+AJAX (or similar) server (provide an API)
+node.js (with or without express)
+websockets
+client-side caching and localStorage
+server-side databases
+Additional well-chosen technologies, tools, or techniques of your choosing that are about as sophisticated as those listed above (as pre-approved by your mentor).  Note that you may include multiple entries here and each counts towards the 10 required elements, so long as you use each in significant ways.
+
+1
+3
+4
+5
+6
+9
+10
+11
+14
+15

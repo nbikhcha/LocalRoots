@@ -1,0 +1,170 @@
+
+.page#checkoutPage {
+}
+
+#checkoutPage .leftNav a {
+    cursor: default;
+}
+#checkoutPage .leftNav a#cartLink {
+    cursor: pointer;
+}
+
+#checkoutPage .invalidNote {
+    color: red;
+    font-size: 18px;
+    margin-bottom: 5px;
+
+}
+
+#checkoutPage #productList {
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+#checkoutPage .continueBtn, .goBackBtn {
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+    
+    position: relative;
+    
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0px 10px 0px;
+    
+    text-decoration: none;
+    border-color: green;
+    border-style: solid;
+    border-width: 1px;
+    color:  black;
+    
+
+    background: #a9db80; /* Old browsers */
+    background: -moz-linear-gradient(top, #a9db80 1%, #58844b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#a9db80), color-stop(100%,#58844b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #a9db80 1%,#58844b 100%); /* Chrome10+,Safari5.1+ */
+   
+    cursor: pointer;
+}
+
+#checkoutPage .continueBtn.disabled {
+    background: lightgray;
+    cursor: default;
+}
+
+#checkoutPage #payment p {
+    text-align: center;
+    font-size: 12px;
+}
+
+#checkoutPage .w60 {
+    width: 60px;
+}
+
+#checkoutPage .w100 {
+    width: 100px;
+}
+
+
+#checkoutPage .itemBlock {
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    
+    
+    height: 50px;
+
+    padding: 4px;
+	border: solid 1px #CCCCCC;
+}
+
+#checkoutPage .itemBlock:hover {
+    background-color: #EEEEEE;
+}
+
+#checkoutPage .itemBlock .itemImg {
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    
+    margin-right: 4px;
+    float: left;
+    border: 1px solid #CCCCCC;
+    /*height: 80px;
+    width: 80px;*/
+    display: none;
+}
+#checkoutPage .itemBlock .itemDetails {
+    height: 100%;
+    position: relative;
+    
+}
+#checkoutPage .itemBlock h1 {
+    font-size: 18px;
+    display: inline;
+}
+
+#checkoutPage .itemBlock h2 {
+    display: inline-block;
+    font-style: italic;
+    position: relative;
+}
+
+#checkoutPage .itemDetails span{
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+    
+    width: 50px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    
+    text-decoration: none;
+    border-color: green;
+    border-style: solid;
+    border-width: 1px;
+    color:  black;
+    
+
+    background: #a9db80; /* Old browsers */
+    background: -moz-linear-gradient(top, #a9db80 1%, #58844b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#a9db80), color-stop(100%,#58844b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #a9db80 1%,#58844b 100%); /* Chrome10+,Safari5.1+ */
+   
+    cursor: pointer;
+    position: relative; 
+    float: right;
+    padding: 5px;
+    font-weight: bold;
+    border: solid 1px;
+}
+
+#checkoutPage .itemDetails span:hover{
+    cursor: pointer;
+    color: red; 
+}
+
+#checkoutPage .itemDetails span:active {
+    position: absolute;
+    top: 1px;
+    right: -1px;
+}
+#checkoutPage .itemBlock p {
+}
+#checkoutPage .itemBlock .farmDist {
+    font-size: 10px;
+    font-style: italic;
+    padding: 10px;
+}
